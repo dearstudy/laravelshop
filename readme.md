@@ -1,3 +1,3 @@
-### Laravel shop test 
+### Laravel shop 
 
 just a test 
