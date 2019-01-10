@@ -12,4 +12,9 @@
 */
 
 Route::get('/', 'PageController@root')->name('root')->middleware('verified');
+
 Auth::routes(['verify' => true]);
+
+Route::group(['middleware' => ['auth', 'verified']], function() {
+    Route::get('user_addresses', 'UserAddressController@index')->name('user_address.index');
+});
